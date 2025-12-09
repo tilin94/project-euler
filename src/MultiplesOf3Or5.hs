@@ -1,8 +1,9 @@
-module MultiplesOf3Or5 (multiplesOf3Or5) where
+module MultiplesOf3Or5 (m3OrM5LessThan) where
 
-import Data.List (nub, sort)
-
-multiplesOf3Or5 :: Int -> [Int]
-multiplesOf3Or5 n
+m3OrM5LessThan :: Int -> [Int]
+m3OrM5LessThan n
   | n < 3 = []
-  | otherwise = sort . nub $ [ x | x <- [3,6..n] <> [5,10..n], x < n]
+  | otherwise =
+      [ x
+      | x <- [3..n-1]
+      , x `mod` 3 == 0 || x `mod` 5 == 0 ]

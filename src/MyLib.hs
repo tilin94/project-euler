@@ -1,3 +1,3 @@
-module MyLib (multiplesOf3Or5) where
+module MyLib (m3OrM5LessThan) where
 
-import MultiplesOf3Or5 (multiplesOf3Or5)
+import MultiplesOf3Or5 (m3OrM5LessThan)
